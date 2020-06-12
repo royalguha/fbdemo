@@ -22,10 +22,11 @@ def CreateComment(request,**kwargs):
     com=request.POST["comment"]
 
 
-    FORM = Comment(comment=com,user=request.user,post_connected=request.self.get_object_or_404())
-    if FORM.is_valid():
-        FORM.save()
-        return redirect("home")
+
+    FORM = Comment(comment=com,user=request.user,post_connected=get_object_or_404(PhotoPost,pk=kwargs["pk"]))
+    #if FORM.is_valid():
+    FORM.save()
+    return redirect("home")
 
     #return HttpResponse("Hi")
 

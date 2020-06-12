@@ -27,13 +27,13 @@ class PostComment(forms.Form):
 #class PostComment(forms.ModelForm):
 
 
-    class Meta:
-        model=Comment
-        fields=["comment"]
-        #fields="__all__"
-        widget={
-            "comment":forms.TextInput(attrs={"placeholder":"Comment"})
-        }
+ #   class Meta:
+  #      model=Comment
+        #fields=["comment"]
+   #     fields="__all__"
+    #    widget={
+     #      "comment":forms.TextInput(attrs={"placeholder":"Comment"})
+      #  }
 
 
 
